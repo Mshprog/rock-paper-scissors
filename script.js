@@ -1,0 +1,3 @@
+function getComputerChoice() {
+  let randomNum;
+}
