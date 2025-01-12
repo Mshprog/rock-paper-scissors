@@ -21,21 +21,14 @@ function getHumanChoice() {
   while (
     humanInput != "ROCK" &&
     humanInput != "PAPER" &&
-    humanInput != "SCISSORS" &&
-    humanInput != null
+    humanInput != "SCISSORS"
   ) {
-    humanInput = prompt(
-      "Choose between ROCK, PAPER, or SCISSORS"
-    ).toUpperCase();
+    humanInput = prompt("Choose between ROCK, PAPER, or SCISSORS");
   }
 
   return alert("You Chose : " + humanInput);
 }
 
-console.log(getHumanChoice);
-
-getHumanChoice();
-
-// function playRound() {}
+function playRound() {}
 
 // function playGame() {}
