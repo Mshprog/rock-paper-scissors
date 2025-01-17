@@ -96,6 +96,7 @@ function playRound(humanChoice, computerChoice) {
 }
 function playGame() {
   for (let i = 1; i <= 5; i++) {
+    alert("ROUND : " + i + "!");
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
@@ -112,3 +113,5 @@ function getWinner() {
     alert("It's a tie!");
   }
 }
+
+playGame();
