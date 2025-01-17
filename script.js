@@ -100,6 +100,7 @@ function playGame() {
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
+  getWinner();
 }
 
 function getWinner() {
