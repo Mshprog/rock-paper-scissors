@@ -1,9 +1,6 @@
 let humanScore = 0; //For storing player score
 let computerScore = 0; // For storing computer score
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 function getComputerChoice() {
   let max = 4;
   let min = 1;
@@ -98,16 +95,9 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 function playGame() {
-  let i;
-  for (i = 1; i <= 5; i++) {
-    playRound(getHumanChoice, getComputerChoice);
-  }
-
-  if (humanScore === 5) {
-    alert("Player got 5 points first! Player wins!");
-  } else {
-    alert("Computer got 5 points first! Computer Wins!");
+  for (let i = 1; i <= 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
   }
 }
-
-playGame();
