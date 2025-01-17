@@ -49,46 +49,65 @@ function playRound(humanChoice, computerChoice) {
     case "ROCK":
       if (computerChoice === "ROCK") {
         alert("It's a draw!");
+        humanScore += 0;
+        computerScore += 0;
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       } else if (computerChoice === "PAPER") {
         alert("You lose! Paper beats Rock");
         computerScore++;
-        alert("Player:" + humanScore + " " + " Computer:" + computerScore);
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       } else if (computerChoice === "SCISSORS") {
         alert("You win! Rock beats Scissors");
         humanScore++;
-        alert("Player:" + humanScore + " " + " Computer:" + computerScore);
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       }
       break;
 
     case "PAPER":
       if (computerChoice === "PAPER") {
         alert("It's a draw!");
+        humanScore += 0;
+        computerScore += 0;
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       } else if (computerChoice === "SCISSORS") {
         alert("You lose! Scissors beats Paper ");
         computerScore++;
-        alert("Player:" + humanScore + " " + " Computer:" + computerScore);
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       } else if (computerChoice === "ROCK") {
         alert("You win! Paper beats Rock");
         humanScore++;
-        alert("Player:" + humanScore + " " + " Computer:" + computerScore);
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       }
       break;
     case "SCISSORS":
       if (computerChoice === "SCISSORS") {
         alert("It's a draw!");
+        humanScore += 0;
+        computerScore += 0;
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       } else if (computerChoice === "ROCK") {
         alert("You lose! Rock beats Scissors");
-        alert("Player:" + humanScore + " " + " Computer:" + computerScore);
-        return computerScore++;
+        computerScore++;
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       } else if (computerChoice === "PAPER") {
         alert("You win! Scissors beats Paper");
         humanScore++;
-        alert("Player:" + humanScore + " " + " Computer:" + computerScore);
+        alert("Player : " + humanScore + " " + " Computer : " + computerScore);
       }
       break;
   }
 }
+function playGame() {
+  let i;
+  for (i = 1; i <= 5; i++) {
+    playRound(getHumanChoice, getComputerChoice);
+  }
 
-playRound(humanSelection, computerSelection);
+  if (humanScore === 5) {
+    alert("Player got 5 points first! Player wins!");
+  } else {
+    alert("Computer got 5 points first! Computer Wins!");
+  }
+}
 
-// function playGame() {}
+playGame();
