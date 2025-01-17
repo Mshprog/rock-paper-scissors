@@ -101,3 +101,13 @@ function playGame() {
     playRound(humanSelection, computerSelection);
   }
 }
+
+function getWinner() {
+  if (humanScore > computerScore) {
+    alert("Player got more points than Computer in 5 rounds! Player Wins!");
+  } else if (computerScore > humanScore) {
+    alert("Computer got more points than Player in 5 rounds! Computer Wins!");
+  } else {
+    alert("It's a tie!");
+  }
+}
